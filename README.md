@@ -17,6 +17,8 @@ CryptoApp adalah aplikasi CLI berbasis Python yang mendukung berbagai algoritma 
 
 - Python 3.7+
 - pycryptodome
+- serpent
+- rc2
 
 Install dependensi:
 
