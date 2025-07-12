@@ -45,7 +45,7 @@ pip3 install pycryptodome serpent rc2
 ---
 ```
 
-🚀 Menjalankan Aplikasi
+##🚀 Menjalankan Aplikasi
 ```
 python3 CryptoApp.py
 
@@ -75,7 +75,7 @@ Contoh Alur Penggunaan:
 
 ---
 
-🗂️ Struktur Proyek
+##🗂️ Struktur Proyek
 ```
 CryptoApp/
 ├── CryptoApp.py          # CLI utama
@@ -88,7 +88,7 @@ CryptoApp/
 ```
 ---
 
-⚠️ Catatan
+##⚠️ Catatan
 
 Status Implementasi:
 
@@ -96,7 +96,7 @@ Status Implementasi:
 
 🧪 Placeholder: Twofish (pakai AES untuk dummy)
 
-🚧 Belum ada:
+##🚧 Belum ada:
 
 Serpent, RC2 (bisa ditambahkan via pip)
 
@@ -104,7 +104,7 @@ Cipher historis: LOKI97, Enigma, SAFER+
 
 
 
-🛡️Keamanan:
+##🛡️Keamanan:
 
 > Aplikasi ini tidak disarankan untuk sistem produksi atau perlindungan data nyata.
 Dirancang hanya untuk pembelajaran dan pengujian algoritma dalam lingkungan aman.
