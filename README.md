@@ -26,23 +26,23 @@ pip install -r requirements.txt
 🚀 Cara Menjalankan
 ```bash
 python3 CryptoApp.py
-
+```
 Kemudian kamu akan melihat menu CLI seperti:
-
+```bash
 === CRYPTOGRAPHY TOOL ===
 1. Encrypt
 2. Decrypt
 3. Exit
-
+```
 Ikuti petunjuk di layar untuk melakukan enkripsi/dekripsi.
 
 📁 Struktur File
-
+```
 CryptoApp/
 ├── CryptoApp.py         # Antarmuka utama CLI
 ├── extended_ciphers.py  # Implementasi GOST, Twofish, XTEA
 └── requirements.txt     # Dependensi Python
-
+```
 ⚠️ Catatan
 
 Algoritma seperti Serpent, RC2, LOKI97, dan lainnya belum diimplementasikan.
