@@ -22,9 +22,9 @@ Install dependensi:
 
 ```bash
 pip install -r requirements.txt
-
+```
 🚀 Cara Menjalankan
-
+```bash
 python3 CryptoApp.py
 
 Kemudian kamu akan melihat menu CLI seperti:
