@@ -41,9 +41,8 @@ pip3 install -r requirements.txt
 ```
 pip3 install pycryptodome serpent rc2
 
-
----
 ```
+---
 
 ##🚀 Menjalankan Aplikasi
 ```
