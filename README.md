@@ -44,7 +44,7 @@ pip3 install pycryptodome serpent rc2
 ```
 ---
 
-#🚀 Menjalankan Aplikasi
+# 🚀 Menjalankan Aplikasi
 ```
 python3 CryptoApp.py
 
