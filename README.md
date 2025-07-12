@@ -1,62 +1,121 @@
 # 🔐 CryptoApp
 
-CryptoApp adalah aplikasi CLI berbasis Python yang mendukung berbagai algoritma kriptografi klasik dan modern. Proyek ini ditujukan untuk pembelajaran dan eksperimen dalam enkripsi dan dekripsi data menggunakan berbagai algoritma dan mode operasi.
+CryptoApp adalah tool enkripsi dan dekripsi berbasis terminal yang mendukung berbagai algoritma kriptografi simetris, baik standar maupun custom. Proyek ini cocok untuk eksperimen dan pembelajaran algoritma cipher blok dan stream secara langsung lewat CLI.
 
-## ✨ Fitur
+---
 
-- 🔒 Enkripsi dan dekripsi teks
-- 🔄 Dukungan berbagai algoritma:
-  - AES, Blowfish, DES, TripleDES, ARC4, CAST-128, ChaCha20
-  - Extended ciphers: GOST 28147-89, Twofish, XTEA
-- ⚙️ Mode operasi:
-  - CBC, CFB, OFB, ECB, CTR, STREAM
-- 🧩 Pilihan output encoding: Base64 dan Hex
-- 🧪 Padding otomatis, IV randomisasi, dan key derivation via PBKDF2 (untuk future expansion)
+## 🔧 Algoritma yang Didukung
 
-## 📦 Requirements
+### Cipher Inti (via PyCryptodome)
+- Simetris: AES, Blowfish, DES, TripleDES, CAST-128, ChaCha20
+- Stream: ARC4
 
+### Cipher Tambahan (implementasi manual)
+- GOST 28147-89 — Cipher blok Soviet berbasis Feistel
+- XTEA — Cipher ringan, 64-round
+- Twofish — Finalis AES (placeholder)
+
+---
+
+## ⚙️ Fitur
+
+- Mode operasi: CBC, CFB, OFB, ECB, CTR, STREAM
+- Output encoding: Base64 dan Hex
+- Padding otomatis, IV random sesuai algoritma
+- Struktur modular, mudah dikembangkan
+- Dukungan PBKDF2 untuk derivasi kunci (bisa diaktifkan)
+
+---
+
+## 📦 Instalasi
+
+### Syarat:
 - Python 3.7+
-- pycryptodome
-- serpent
-- rc2
-
-Install dependensi:
+- PyCryptodome 3.15+
+- (Opsional): serpent, rc2
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
-🚀 Cara Menjalankan
-```bash
+# atau manual
+```
+pip3 install pycryptodome serpent rc2
+
+
+---
+```
+
+🚀 Menjalankan Aplikasi
+```
 python3 CryptoApp.py
-```
-Kemudian kamu akan melihat menu CLI seperti:
-```bash
+
 === CRYPTOGRAPHY TOOL ===
 1. Encrypt
 2. Decrypt
 3. Exit
 ```
-Ikuti petunjuk di layar untuk melakukan enkripsi/dekripsi.
+Contoh Alur Penggunaan:
 
-📁 Struktur File
-```
-CryptoApp/
-├── CryptoApp.py         # Antarmuka utama CLI
-├── extended_ciphers.py  # Implementasi GOST, Twofish, XTEA
-└── requirements.txt     # Dependensi Python
-```
-⚠️ Catatan
-
-Algoritma seperti Serpent, RC2, LOKI97, dan lainnya belum diimplementasikan.
-
-Twofish dan Rijndael-128 masih menggunakan placeholder AES sementara (bisa dikembangkan lebih lanjut).
+1. Pilih: Enkripsi atau Dekripsi
 
 
-🛡️ Legal
+2. Pilih algoritma (dari 10+ yang tersedia)
 
-Proyek ini hanya untuk tujuan edukasi dan eksperimen pribadi. Jangan gunakan untuk tujuan ilegal atau menyimpan data sensitif tanpa audit keamanan yang tepat.
+
+3. Pilih mode operasi (CBC/OFB/etc.)
+
+
+4. Masukkan plaintext & kunci, atau ciphertext untuk dekripsi
+
+
+5. Hasil tampil lengkap: Algoritma, IV, hasil enkripsi/dekripsi
+
+
 
 
 ---
+
+🗂️ Struktur Proyek
+```
+CryptoApp/
+├── CryptoApp.py          # CLI utama
+├── extended_ciphers.py   # Cipher ekstensi:
+│   ├── GOST              # Implementasi lengkap
+│   ├── XTEA              # Cipher blok ringan
+│   └── Twofish           # Placeholder
+└── requirements.txt
+
+```
+---
+
+⚠️ Catatan
+
+Status Implementasi:
+
+✅ Berfungsi penuh: AES, GOST, XTEA, ChaCha20, ARC4
+
+🧪 Placeholder: Twofish (pakai AES untuk dummy)
+
+🚧 Belum ada:
+
+Serpent, RC2 (bisa ditambahkan via pip)
+
+Cipher historis: LOKI97, Enigma, SAFER+
+
+
+
+🛡️Keamanan:
+
+> Aplikasi ini tidak disarankan untuk sistem produksi atau perlindungan data nyata.
+Dirancang hanya untuk pembelajaran dan pengujian algoritma dalam lingkungan aman.
+
+
+
+
+---
+
+📄 Lisensi
+
+Hanya untuk penggunaan edukatif. Tidak ada jaminan keamanan.
 
 ---
